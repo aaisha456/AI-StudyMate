@@ -1,6 +1,6 @@
 # AI-StudyMate
-R.P Institute of Hospitality & Management
-Aaisha Khan
+College Name: R.P Institute of Hospitality & Management
+Student Name: Aaisha Khan
 Technology used:
 - Frontend: HTML5, CSS3, JavaScript, Bootstrap
 - Backend: Python 3.13, Flask 3.1.3
