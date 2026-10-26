@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Progress | AI StudyMate</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+<header class="dashboard-header">
+
+    <div class="header-container">
+
+        <div class="brand">
+            <h1>AI StudyMate</h1>
+            <p>Learn • Understand • Practice • Improve</p>
+        </div>
+
+        <nav class="dashboard-nav">
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="study-material.html">
+                Study Material
+            </a>
+
+            <a href="learn.html">
+                Learn
+            </a>
+
+            <a href="teach-back.html">
+                Teach Me Back
+            </a>
+
+            <a href="mcq.html">
+                MCQ Practice
+            </a>
+
+            <a href="short-answer.html">
+                Short Answer
+            </a>
+
+            <a href="progress.html" class="active">
+                Progress
+            </a>
+
+            <a href="login.html">
+                Logout
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main class="study-material-page">
+
+    <section class="page-introduction">
+
+        <p class="section-label">
+            MY PROGRESS
+        </p>
+
+        <h2>
+            Track Your Learning
+        </h2>
+
+        <p>
+            Review your study activity and understand how you are progressing.
+        </p>
+
+    </section>
+
+
+    <!-- PROGRESS STATISTICS -->
+
+    <section class="progress-grid">
+
+        <article class="progress-card">
+
+            <p class="progress-label">
+                TOPICS STUDIED
+            </p>
+
+            <h3 id="topicsStudied">
+                0
+            </h3>
+
+            <p>
+                Topics added to your study materials
+            </p>
+
+        </article>
+
+
+        <article class="progress-card">
+
+            <p class="progress-label">
+                CONCEPTS PRACTICED
+            </p>
+
+            <h3 id="conceptsPracticed">
+                0
+            </h3>
+
+            <p>
+                Concepts practiced through learning activities
+            </p>
+
+        </article>
+
+
+        <article class="progress-card">
+
+            <p class="progress-label">
+                FLASHCARDS REVIEWED
+            </p>
+
+            <h3 id="flashcardsReviewed">
+                0
+            </h3>
+
+            <p>
+                Flashcards generated for revision
+            </p>
+
+        </article>
+
+
+        <article class="progress-card">
+
+            <p class="progress-label">
+                UNDERSTANDING
+            </p>
+
+            <h3>
+                <span id="understandingPercentage">
+                    0
+                </span>%
+            </h3>
+
+            <p>
+                Estimated overall understanding
+            </p>
+
+        </article>
+
+    </section>
+
+
+    <!-- UNDERSTANDING SECTION -->
+
+    <section class="saved-material-section">
+
+        <div class="section-heading">
+
+            <h3>
+                Understanding Progress
+            </h3>
+
+            <p>
+                Your current estimated understanding level.
+            </p>
+
+        </div>
+
+
+        <div class="progress-bar-container">
+
+            <div
+                id="understandingBar"
+                class="progress-bar"
+                style="width: 0%;"
+            ></div>
+
+        </div>
+
+
+        <p
+            id="understandingMessage"
+            class="progress-message"
+        >
+            Start practicing to build your learning progress.
+        </p>
+
+    </section>
+
+
+    <!-- LEARNING ACTIVITY -->
+
+    <section class="saved-material-section">
+
+        <div class="section-heading">
+
+            <h3>
+                Your Learning Activity
+            </h3>
+
+            <p>
+                Continue using StudyMate to improve your understanding.
+            </p>
+
+        </div>
+
+
+        <div class="progress-activities">
+
+            <a href="study-material.html">
+                <strong>
+                    Study Material
+                </strong>
+
+                <span>
+                    Add and review your study material.
+                </span>
+            </a>
+
+
+            <a href="teach-back.html">
+                <strong>
+                    Teach Me Back
+                </strong>
+
+                <span>
+                    Explain concepts in your own words.
+                </span>
+            </a>
+
+
+            <a href="mcq.html">
+                <strong>
+                    MCQ Practice
+                </strong>
+
+                <span>
+                    Test your conceptual knowledge.
+                </span>
+            </a>
+
+
+            <a href="short-answer.html">
+                <strong>
+                    Short Answer
+                </strong>
+
+                <span>
+                    Practice writing conceptual answers.
+                </span>
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <p>
+        AI StudyMate
+    </p>
+
+    <p class="creator-credit">
+        Powered by <strong>Aaisha Khan</strong>
+    </p>
+
+    <p>
+        © 2026 AI StudyMate. All rights reserved.
+    </p>
+
+</footer>
+
+
+<script src="js/progress.js"></script>
+
+</body>
+
+</html>

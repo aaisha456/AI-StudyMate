@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Learn | AI StudyMate</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/dashboard.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =========================================
+         HEADER
+         ========================================= -->
+
+    <header class="dashboard-header">
+
+        <div class="header-container">
+
+            <div class="brand">
+
+                <h1>
+                    AI StudyMate
+                </h1>
+
+                <p>
+                    Learn • Understand • Practice • Improve
+                </p>
+
+            </div>
+
+            <nav class="dashboard-nav">
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="study-material.html">
+                    Study Material
+                </a>
+
+                <a href="learn.html" class="active">
+                    Learn
+                </a>
+
+                <a href="login.html">
+                    Logout
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         MAIN CONTENT
+         ========================================= -->
+
+    <main class="study-material-page">
+
+        <section class="page-introduction">
+
+            <p class="section-label">
+                AI LEARNING
+            </p>
+
+            <h2>
+                Understand Your Topic
+            </h2>
+
+            <p>
+                Select a topic and let AI StudyMate explain
+                the concept in simple, clear language.
+            </p>
+
+        </section>
+
+
+        <!-- =====================================
+             AI EXPLANATION FORM
+             ===================================== -->
+
+        <section class="material-form-section">
+
+            <div class="section-heading">
+
+                <h3>
+                    Ask AI to Explain
+                </h3>
+
+                <p>
+                    Enter the topic and provide your study
+                    material for a focused explanation.
+                </p>
+
+            </div>
+
+
+            <form id="learnForm">
+
+                <!-- Topic -->
+                <div class="form-group">
+
+                    <label for="learnTopic">
+                        Topic
+                    </label>
+
+                    <input
+                        type="text"
+                        id="learnTopic"
+                        placeholder="Example: Database Normalization"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Study Material -->
+                <div class="form-group">
+
+                    <label for="learnMaterial">
+                        Study Material
+                    </label>
+
+                    <textarea
+                        id="learnMaterial"
+                        rows="12"
+                        placeholder="Paste your study material here..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="primary-button"
+                >
+                    Explain with AI
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- =====================================
+             AI RESPONSE
+             ===================================== -->
+
+        <section class="saved-material-section">
+
+            <div class="section-heading">
+
+                <h3>
+                    AI Explanation
+                </h3>
+
+                <p>
+                    Your explanation will appear here.
+                </p>
+
+            </div>
+
+            <div id="aiExplanationContainer">
+
+                <p class="empty-message">
+                    No explanation generated yet.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+         ========================================= -->
+
+    <footer class="site-footer">
+
+        <p>
+            AI StudyMate
+        </p>
+
+        <p class="creator-credit">
+            Powered by <strong>Aaisha Khan</strong>
+        </p>
+
+        <p>
+            © 2026 AI StudyMate. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="js/learn.js"></script>
+
+</body>
+
+</html>

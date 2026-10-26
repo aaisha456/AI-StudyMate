@@ -1,0 +1,507 @@
+/* =========================================
+   AI STUDYMATE - MAIN STYLESHEET
+   ========================================= */
+
+
+/* =========================================
+   1. BASIC RESET
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #111111;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   2. GENERAL ELEMENTS
+   ========================================= */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+p {
+    color: #555555;
+}
+
+
+h1,
+h2,
+h3 {
+    color: #111111;
+}
+
+
+/* =========================================
+   3. HEADER
+   ========================================= */
+
+header {
+    width: 100%;
+    padding: 22px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eeeeee;
+    background-color: #ffffff;
+}
+
+
+.logo h1 {
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+
+.logo p {
+    margin-top: 2px;
+    font-size: 12px;
+    color: #777777;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+
+nav a {
+    font-size: 14px;
+    font-weight: 500;
+    color: #222222;
+    transition: color 0.2s ease;
+}
+
+
+nav a:hover {
+    color: #c62828;
+}
+
+
+/* =========================================
+   4. HERO SECTION
+   ========================================= */
+
+.hero {
+    padding: 110px 7% 100px;
+    background-color: #ffffff;
+}
+
+
+.hero-content {
+    max-width: 850px;
+}
+
+
+.tagline {
+    margin-bottom: 18px;
+    color: #c62828;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+.hero h2 {
+    font-size: clamp(40px, 6vw, 68px);
+    line-height: 1.08;
+    letter-spacing: -2px;
+    margin-bottom: 28px;
+}
+
+
+.hero h2 span {
+    color: #c62828;
+}
+
+
+.description {
+    max-width: 680px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #555555;
+    margin-bottom: 35px;
+}
+
+
+/* =========================================
+   5. HERO BUTTONS
+   ========================================= */
+
+.hero-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+
+.primary-button,
+.secondary-button {
+    display: inline-block;
+    padding: 13px 22px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid #111111;
+    transition: all 0.2s ease;
+}
+
+
+.primary-button {
+    background-color: #111111;
+    color: #ffffff;
+}
+
+
+.primary-button:hover {
+    background-color: #c62828;
+    border-color: #c62828;
+}
+
+
+.secondary-button {
+    background-color: #ffffff;
+    color: #111111;
+}
+
+
+.secondary-button:hover {
+    color: #c62828;
+    border-color: #c62828;
+}
+
+
+/* =========================================
+   6. LEARNING CYCLE
+   ========================================= */
+
+.learning-cycle {
+    padding: 90px 7%;
+    background-color: #f8f8f8;
+}
+
+
+.learning-cycle > h2,
+.features > h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+
+.learning-cycle > p {
+    margin-bottom: 45px;
+    font-size: 16px;
+}
+
+
+.cycle-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+
+.cycle-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border: 1px solid #e5e5e5;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+
+.cycle-card:hover {
+    transform: translateY(-4px);
+    border-color: #c62828;
+}
+
+
+.cycle-number {
+    margin-bottom: 18px;
+    color: #c62828;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+.cycle-card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+
+.cycle-card p {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   7. TEACH ME BACK SECTION
+   ========================================= */
+
+.teach-back-introduction {
+    padding: 100px 7%;
+    background-color: #ffffff;
+}
+
+
+.feature-content {
+    max-width: 900px;
+}
+
+
+.section-label {
+    margin-bottom: 12px;
+    color: #c62828;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+
+.feature-content h2 {
+    font-size: 42px;
+    margin-bottom: 18px;
+}
+
+
+.feature-content > p:not(.section-label) {
+    max-width: 720px;
+    margin-bottom: 35px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   8. EXAMPLE BOX
+   ========================================= */
+
+.example-box {
+    max-width: 700px;
+    padding: 28px;
+    border: 1px solid #dddddd;
+    background-color: #fafafa;
+}
+
+
+.example-label {
+    margin-bottom: 12px;
+    color: #c62828;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+.example-box > p {
+    margin-bottom: 12px;
+}
+
+
+.mistake {
+    margin-top: 22px;
+    padding: 18px;
+    border-left: 4px solid #c62828;
+    background-color: #ffffff;
+}
+
+
+.mistake strong {
+    color: #c62828;
+    font-size: 14px;
+}
+
+
+.mistake p {
+    margin-top: 6px;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   9. FEATURES SECTION
+   ========================================= */
+
+.features {
+    padding: 90px 7%;
+    background-color: #f8f8f8;
+}
+
+
+.feature-grid {
+    margin-top: 45px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+
+.feature-card {
+    padding: 28px;
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+}
+
+
+.feature-card h3 {
+    margin-bottom: 12px;
+    font-size: 19px;
+}
+
+
+.feature-card p {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   10. FOOTER
+   ========================================= */
+
+footer {
+    padding: 50px 7%;
+    background-color: #111111;
+    color: #ffffff;
+}
+
+
+footer h3 {
+    margin-bottom: 8px;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+
+footer p {
+    margin-bottom: 5px;
+    color: #aaaaaa;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   11. RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 20px 5%;
+    }
+
+
+    .hero,
+    .learning-cycle,
+    .teach-back-introduction,
+    .features {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+
+    .cycle-container,
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+
+    nav {
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+
+
+    .hero {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+
+    .hero h2 {
+        font-size: 40px;
+        letter-spacing: -1px;
+    }
+
+
+    .description {
+        font-size: 15px;
+    }
+
+
+    .learning-cycle > h2,
+    .features > h2 {
+        font-size: 30px;
+    }
+
+
+    .feature-content h2 {
+        font-size: 34px;
+    }
+
+
+    .cycle-container,
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+    .primary-button,
+    .secondary-button {
+        width: 100%;
+        text-align: center;
+    }
+
+}
+/* =========================================
+   CREATOR CREDIT
+   ========================================= */
+
+.creator-credit {
+    margin-top: 18px;
+    color: #999999;
+    font-size: 12px;
+}
+
+.creator-credit strong {
+    color: #ffffff;
+    font-weight: 600;
+}

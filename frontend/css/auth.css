@@ -1,0 +1,162 @@
+/* =========================================
+   AUTHENTICATION PAGES
+   Login & Register
+   ========================================= */
+
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background: #ffffff;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 440px;
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.auth-header h1 {
+    margin: 0;
+    color: #111111;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.auth-header p {
+    margin-top: 8px;
+    color: #666666;
+    font-size: 14px;
+}
+
+.auth-card {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    padding: 35px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.auth-card h2 {
+    margin: 0 0 8px;
+    color: #111111;
+    font-size: 25px;
+}
+
+.auth-description {
+    margin: 0 0 25px;
+    color: #666666;
+    font-size: 14px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #222222;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid #cccccc;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input:focus {
+    border-color: #b21f2d;
+}
+
+.auth-button {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.auth-switch {
+    margin-top: 22px;
+    text-align: center;
+    color: #666666;
+    font-size: 14px;
+}
+
+.auth-switch a {
+    color: #b21f2d;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.auth-switch a:hover {
+    text-decoration: underline;
+}
+
+.back-home {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: #444444;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.back-home:hover {
+    color: #b21f2d;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 500px) {
+
+    .auth-page {
+        padding: 25px 15px;
+    }
+
+    .auth-card {
+        padding: 25px 20px;
+    }
+
+    .auth-header h1 {
+        font-size: 28px;
+    }
+
+}
+
+/* Password show/hide button */
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding-right: 45px;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+    font-size: 18px;
+    padding: 4px;
+}

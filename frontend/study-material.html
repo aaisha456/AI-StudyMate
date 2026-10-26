@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Study Material | AI StudyMate</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/dashboard.css"
+    >
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="dashboard-header">
+
+        <div class="header-container">
+
+            <div class="brand">
+
+                <h1>AI StudyMate</h1>
+
+                <p>
+                    Learn • Understand • Practice • Improve
+                </p>
+
+            </div>
+
+            <nav class="dashboard-nav">
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <a
+                    href="study-material.html"
+                    class="active"
+                >
+                    Study Material
+                </a>
+
+                <a href="login.html">
+                    Logout
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="study-material-page">
+
+        <!-- PAGE INTRODUCTION -->
+        <section class="page-introduction">
+
+            <p class="section-label">
+                STUDY MATERIAL
+            </p>
+
+            <h2>
+                Add Your Study Material
+            </h2>
+
+            <p>
+                Add your notes and topics so AI StudyMate can
+                help you understand, practice and revise them.
+            </p>
+
+        </section>
+
+
+        <!-- CREATE STUDY MATERIAL -->
+        <section class="material-form-section">
+
+            <div class="section-heading">
+
+                <h3>
+                    Create Study Material
+                </h3>
+
+                <p>
+                    Enter the information below to save your
+                    study material manually.
+                </p>
+
+            </div>
+
+
+            <form id="studyMaterialForm">
+
+                <!-- SUBJECT -->
+                <div class="form-group">
+
+                    <label for="subjectName">
+                        Subject
+                    </label>
+
+                    <input
+                        type="text"
+                        id="subjectName"
+                        name="subject_name"
+                        placeholder="Example: Computer Science"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- TOPIC -->
+                <div class="form-group">
+
+                    <label for="topicName">
+                        Topic
+                    </label>
+
+                    <input
+                        type="text"
+                        id="topicName"
+                        name="topic_name"
+                        placeholder="Example: Database Management System"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- MATERIAL TITLE -->
+                <div class="form-group">
+
+                    <label for="materialTitle">
+                        Material Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="materialTitle"
+                        name="material_title"
+                        placeholder="Example: DBMS Normalization Notes"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- STUDY MATERIAL -->
+                <div class="form-group">
+
+                    <label for="materialContent">
+                        Study Material
+                    </label>
+
+                    <textarea
+                        id="materialContent"
+                        name="material_content"
+                        rows="12"
+                        placeholder="Paste or type your study notes here..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <!-- SAVE BUTTON -->
+                <button
+                    type="submit"
+                    class="primary-button"
+                >
+                    Save Study Material
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- SAVED MATERIALS -->
+        <section class="saved-material-section">
+
+            <div class="section-heading">
+
+                <h3>
+                    Your Saved Materials
+                </h3>
+
+                <p>
+                    Materials you have previously added will
+                    appear here.
+                </p>
+
+            </div>
+
+
+            <div id="materialsContainer">
+
+                <p class="empty-message">
+                    Loading your study materials...
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <p>
+            AI StudyMate
+        </p>
+
+        <p class="creator-credit">
+            Powered by <strong>Aaisha Khan</strong>
+        </p>
+
+        <p>
+            © 2026 AI StudyMate. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="js/study-material.js"></script>
+
+</body>
+
+</html>
