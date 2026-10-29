@@ -434,10 +434,21 @@ def teach_back_route():
         )
 
         return jsonify({
-            "success": True,
-            "topic": topic,
-            "analysis": analysis
-        }), 200
+    "success": True,
+    "topic": topic,
+    "understanding_percentage":
+        analysis["understanding_percentage"],
+    "understanding_level":
+        analysis["understanding_level"],
+    "correct_concepts":
+        [analysis["correct_concepts"]],
+    "missing_concepts":
+        [analysis["missing_concepts"]],
+    "misconceptions":
+        [analysis["misconceptions"]],
+    "weak_areas":
+        [analysis["weak_areas"]]
+}), 200
 
     except Exception as error:
 

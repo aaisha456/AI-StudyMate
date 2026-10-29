@@ -12,9 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
 async function analyzeTeachBack(event) {
     event.preventDefault();
 
-    const topicElement = document.getElementById("topic");
-    const explanationElement = document.getElementById("explanation");
-
+    const topicElement = document.getElementById("teachTopic");
+    const explanationElement = document.getElementById("studentExplanation");
     const topic = topicElement.value.trim();
     const explanation = explanationElement.value.trim();
 
@@ -42,7 +41,7 @@ async function analyzeTeachBack(event) {
                 credentials: "include",
                 body: JSON.stringify({
                     topic: topic,
-                    explanation: explanation
+                    student_explanation: explanation
                 })
             }
         );
@@ -58,6 +57,7 @@ async function analyzeTeachBack(event) {
 
         // Save understanding score to Progress
         await saveUnderstandingProgress(
+            topic,
             result.understanding_percentage
         );
 
@@ -81,6 +81,19 @@ function displayTeachBackResult(result) {
     if (resultSection) {
         resultSection.style.display = "block";
     }
+    const emptyMessage =
+    document.getElementById("noAnalysisMessage");
+
+const analysisContent =
+    document.getElementById("analysisContent");
+
+if (emptyMessage) {
+    emptyMessage.style.display = "none";
+}
+
+if (analysisContent) {
+    analysisContent.style.display = "block";
+}
 
     const scoreElement =
         document.getElementById("understandingScore");
@@ -156,20 +169,18 @@ function displayTeachBackResult(result) {
  * Save Teach Me Back understanding score
  * to the student's Progress record.
  */
-async function saveUnderstandingProgress(score) {
-
-    const understanding =
-        Number(score);
+async function saveUnderstandingProgress(topic, score) {
+    const understanding = Number(score);
 
     if (
         Number.isNaN(understanding) ||
-        understanding < 0
+        understanding < 0 ||
+        understanding > 100
     ) {
         return;
     }
 
     try {
-
         const response = await fetch(
             "http://127.0.0.1:5000/api/progress/activity",
             {
@@ -180,7 +191,8 @@ async function saveUnderstandingProgress(score) {
                 credentials: "include",
                 body: JSON.stringify({
                     activity_type: "understanding",
-                    value: understanding
+                    topic: topic,
+                    score: score
                 })
             }
         );
@@ -200,7 +212,6 @@ async function saveUnderstandingProgress(score) {
         );
 
     } catch (error) {
-
         console.error(
             "Progress update error:",
             error

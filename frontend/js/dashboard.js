@@ -57,7 +57,14 @@ document.getElementById("flashcardsReviewed").textContent =
 
 document.getElementById("understandingPercentage").textContent =
     `${result.progress.understanding_percentage}%`;
-
+document.getElementById("revisionTopicCount").textContent =
+    result.progress.revision_topic_count ?? 0;
+console.log("Revision count:", result.progress.revision_topic_count);
+console.log("Revision element:", document.getElementById("revisionTopicCount"));
+document.getElementById("revisionStatus").textContent =
+    (result.progress.revision_topic_count ?? 0) > 0
+        ? "Recommended"
+        : "On Track";
     } catch (error) {
         console.error("Progress loading error:", error);
     }

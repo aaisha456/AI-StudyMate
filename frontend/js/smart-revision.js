@@ -3,11 +3,8 @@ document.addEventListener(
     loadRevisionData
 );
 
-
 async function loadRevisionData() {
-
     try {
-
         const response = await fetch(
             "http://127.0.0.1:5000/api/progress",
             {
@@ -16,71 +13,31 @@ async function loadRevisionData() {
             }
         );
 
-
-        const result =
-            await response.json();
-
+        const result = await response.json();
 
         if (!result.success) {
             return;
         }
 
-
-        const understanding =
-            Number(
-                result.understanding_percentage
-            ) || 0;
-
-
-        const topicCount =
-            Number(
-                result.topics_studied
-            ) || 0;
-
+        const revisionCount =
+            Number(result.progress.revision_topic_count) || 0;
 
         const revisionTopicCount =
-            document.getElementById(
-                "revisionTopicCount"
-            );
-
+            document.getElementById("revisionTopicCount");
 
         const revisionStatus =
-            document.getElementById(
-                "revisionStatus"
-            );
+            document.getElementById("revisionStatus");
 
-
-        /*
-         * If understanding is below 80%,
-         * revision is recommended.
-         */
-
-        if (understanding < 80) {
-
-            revisionTopicCount.textContent =
-                topicCount;
-
-            revisionStatus.textContent =
-                "Recommended";
-
-        } else {
-
-            revisionTopicCount.textContent =
-                0;
-
-            revisionStatus.textContent =
-                "On Track";
-
+        if (revisionTopicCount) {
+            revisionTopicCount.textContent = revisionCount;
         }
 
+        if (revisionStatus) {
+            revisionStatus.textContent =
+                revisionCount > 0 ? "Recommended" : "On Track";
+        }
 
     } catch (error) {
-
-        console.error(
-            "Smart Revision error:",
-            error
-        );
-
+        console.error("Smart Revision error:", error);
     }
-
 }

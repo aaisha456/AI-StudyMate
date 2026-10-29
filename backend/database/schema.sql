@@ -56,3 +56,18 @@ CREATE TABLE IF NOT EXISTS flashcards (
     FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
 
+-- =========================================
+-- SMART REVISION TOPICS
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS revision_topics (
+    revision_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER NOT NULL,
+    topic_name TEXT NOT NULL,
+    understanding_percentage REAL NOT NULL DEFAULT 0,
+    needs_revision INTEGER NOT NULL DEFAULT 1,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    UNIQUE (user_id, topic_name)
+);
